@@ -1,0 +1,52 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - check_order
+  - delivery
+  - right
+
+responses:
+
+  utter_greet:
+    - text: "hello"  # Define the response as a dictionary
+
+  utter_right:
+    - text: "Your order is currently in transit, please be patient and wait"  # Define the response as a dictionary
+
+  utter_delivery:
+    - text: "Okay, so what is your order number"
+    - text: "What is your email and order number?"
+
+  utter_answer:
+    - text: "hold on. I have found the relevant order number.\n I will send your request to after-sales customer service.Thank you very much for your feedback. \n We will contact you within 3-5 working days. Please keep your phone connected"
+    - text: "hold on. \n We have found an order from A To B, \n  Is it this express delivery?"
+    
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_default:
+  - text: I'm sorry, I can't help you.
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
